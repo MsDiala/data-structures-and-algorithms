@@ -91,23 +91,23 @@ Return the resulting output array.
 
 
 const fizzbuzz = (arr) => {
-  let outputArray = [];
-  const threeTest = num/3;
-  const fiveTest = num/5;
-  const threeandFiveTest = num/5 && num/3;
-
-  if (threeTest % 1 === 0){
-    outputArray.push('Fizz');
-  }
-  else if (fiveTest % 1 === 0){
-    outputArray.push('Buzz');
-  }
-  else if (threeandFiveTest % 1=== 0){
-    outputArray.push('Fizz Buzz');
-  }
-  else (outputArray.push(num));
-};
-
+  const outputArray = [];
+  arr.forEach((num, index) =>{
+    if (num % 3 === 0 && num % 5 === 0) {
+      outputArray.push('Fizz Buzz');
+    }
+    else if (num % 3 === 0) {
+      outputArray.push('Fizz');
+    }
+    else if (num % 5 === 0) {
+      outputArray.push('Buzz');
+    }
+    else {
+      outputArray.push(num);
+    }
+  });
+  return outputArray;
+}
 /* ------------------------------------------------------------------------------------------------
 TESTS
 
