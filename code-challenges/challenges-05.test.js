@@ -83,8 +83,8 @@ For example, wordsToCharList('gregor') returns ['g','r','e','g','o','r'].
 const wordsToCharList = (arr) => {
   // Solution code here...
   let result = [];
-  for (let i = 0; i < str.length; i++) {
-    result.push(str[i]);
+  for (let i = 0; i < arr.length; i++) {
+    result.push(arr[i]);
   }
   return result;
 };
@@ -134,7 +134,6 @@ const gruffaloCrumble = {
 const listFoods = (recipe) => {
   let result = [];
   // Solution code here...
-  let result = [];
   let food = '';
   recipe.ingredients.forEach((ingredient) => {
     let counter = 2;
@@ -149,7 +148,6 @@ const listFoods = (recipe) => {
     result.push(food);
   });
   return result;
-  return result;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -163,19 +161,18 @@ You may also use other string or array methods.
 const splitFoods = (recipe) => {
   // let result = [];
   // // Solution code here...
-  // let result = [];
-  // recipe.ingredients.forEach((ingredient) => {
-  //   let food = '';
-  //   let arraySplit = ingredient.split(' ');
-  //   let foodArray = arraySplit.slice(2);
-  //   foodArray.forEach((word) => {
-  //     if (food !== '') {
-  //       food += ' ';
-  //     }
-  //     food += word;
-  //   });
-  //   result.push(food);
-  // });
+  recipe.ingredients.forEach((ingredient) => {
+    let food = '';
+    let arraySplit = ingredient.split(' ');
+    let foodArray = arraySplit.slice(2);
+    foodArray.forEach((word) => {
+      if (xfood !== '') {
+        food += ' ';
+      }
+      food += word;
+    });
+    result.push(food);
+  });
   return result;
 };
 
@@ -192,13 +189,12 @@ Return a new array containing just the verbs. For example, ['Mix until evenly di
 const stepActions = (recipe) => {
   let result = [];
   // Solution code here...
-  // let result = [];
-  // recipe.steps.forEach((step) => {
-  //   let split = step.split(' ');
-  //   let verbArray = split.slice(0, 1);
-  //   let verb = verbArray.toString();
-  //   result.push(verb);
-  // });
+  recipe.steps.forEach((step) => {
+    let split = step.split(' ');
+    let verbArray = split.slice(0, 1);
+    let verb = verbArray.toString();
+    result.push(verb);
+  });
   return result;
 };
 
@@ -217,16 +213,16 @@ For example:
 
 const removeEvenValues = (arr) => {
   // Solution code here...
-  // console.log('original', arr);
-  // arr.forEach((even) => {
-  //   if (even % 2 === 0) {
-  //     arr.forEach((number) => {
-  //       if (number % 2 === 0) {
-  //         arr.splice(arr.indexOf(number), 1);
-  //       }
-  //     });
-  //   }
-  // });
+  console.log('original', arr);
+  arr.forEach((even) => {
+    if (even % 2 === 0) {
+      arr.forEach((number) => {
+        if (number % 2 === 0) {
+          arr.splice(arr.indexOf(number), 1);
+        }
+      });
+    }
+  });
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -246,18 +242,6 @@ removeLastCharacters('Gregor', 9) returns ''
 
 const removeLastCharacters = (str, numberOfCharacters) => {
   // Solution code here...
-  // if (numberOfCharacters >= 0) {
-  //   let sliced = str.slice(0, -numberOfCharacters);
-  //   return sliced;
-  // }
-  // if (numberOfCharacters < 0) {
-  //   return str;
-  // }
-  // if (numberOfCharacters >= str.length) {
-  //   let fullSlice = str.slice(0, numberOfCharacters);
-  //   console.log(fullSlice);
-  //   return fullSlice;
-  // }
 
 };
 
